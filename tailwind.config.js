@@ -23,7 +23,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      body: ["Andada Pro", "serif"],
+      body: ["Poppins", "Inter"],
       sans: ["ui-sans-serif", "system-ui"],
     },
   },
