@@ -16,7 +16,6 @@ const Search = ({ search, setSearch }) => {
         <div className="flex space-x-2 pr-5">
           <button className="tag">Pop</button>
           <button className="tag">Rock</button>
-          <button className="tag">Workout</button>
         </div>
 
         <div className="flex items-center space-x-1.5 text-[#CECECE] pl-4">
