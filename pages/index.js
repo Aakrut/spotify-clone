@@ -1,9 +1,25 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Dashboard } from "../components";
+import { Dashboard, Loader } from "../components";
 import styles from "../styles/Home.module.css";
+import { useRouter } from "next/router";
+import { useSession } from "next-auth/react";
 
 export default function Home() {
+  const router = useRouter();
+  const { status, data: session } = useSession({
+    onUnauthenticated() {
+      router.push("/auth/signin");
+    },
+  });
+
+  if (status === "loading") {
+    return <Loader />
+  }
+
+
+  console.log(session);
+
   return (
     <div className={styles.container}>
       <Head>
