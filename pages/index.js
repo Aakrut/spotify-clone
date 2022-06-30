@@ -8,15 +8,15 @@ import { useSession } from "next-auth/react";
 export default function Home() {
   const router = useRouter();
   const { status, data: session } = useSession({
+    required: true,
     onUnauthenticated() {
       router.push("/auth/signin");
     },
   });
 
   if (status === "loading") {
-    return <Loader />
+    return <Loader />;
   }
-
 
   console.log(session);
 
