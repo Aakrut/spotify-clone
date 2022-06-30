@@ -114,6 +114,8 @@ section {
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&family=Poppins:wght@100;200;300;400;500&display=swap');
 
+
+
 @layer base {
   body {
     @apply font-body bg-black scrollbar-hide;
