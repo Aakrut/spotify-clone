@@ -48,7 +48,7 @@ const Right = ({ chooseTrack, spotifyApi }) => {
       {/* Recently Played Tracks */}
       <div className="bg-[#0D0D0D] border-2 border-[#262626] p-4 rounded-xl space-y-4">
         <div className="flex items-center justify-between">
-          <h4 className="text-white font-semibold text-sm">Recently Played</h4>
+          <h4 className="text-white font-semibold text-sm font-body">Recently Played</h4>
           <ViewGridIcon className="text-[#686868] h-6" />
         </div>
 
@@ -61,7 +61,7 @@ const Right = ({ chooseTrack, spotifyApi }) => {
             />
           ))}
         </div>
-        <button className="text-[#CECECE] bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full font-bold bg-opacity-80 hover:bg-opacity-100 transition ease-out">
+        <button className="text-[#CECECE] bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full font-bold bg-opacity-80 hover:bg-opacity-100 transition ease-out font-body">
           View All
         </button>
       </div>

@@ -6,3 +6,4 @@ export { default as Loader } from "./Loader";
 export { default as Poster } from "./Poster";
 export { default as Track } from "./Track";
 export { default as Dropdown } from "./Dropdown";
+export { default as Player } from "./Player";
