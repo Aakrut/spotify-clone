@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
-import Search from "./Search";
 import { useSession } from "next-auth/react";
+import { useEffect, useState } from "react";
 import Poster from "./Poster";
+import Search from "./Search";
 import Track from "./Track";
 
-const Body = ({ spotifyApi, chooseTrack }) => {
+function Body({ spotifyApi, chooseTrack }) {
   const { data: session } = useSession();
   const accessToken = session?.accessToken;
   const [search, setSearch] = useState("");
-
   const [searchResults, setSearchResults] = useState([]);
   const [newReleases, setNewReleases] = useState([]);
 
@@ -17,6 +16,7 @@ const Body = ({ spotifyApi, chooseTrack }) => {
     spotifyApi.setAccessToken(accessToken);
   }, [accessToken]);
 
+  // Searching...
   useEffect(() => {
     if (!search) return setSearchResults([]);
     if (!accessToken) return;
@@ -37,6 +37,7 @@ const Body = ({ spotifyApi, chooseTrack }) => {
     });
   }, [search, accessToken]);
 
+  // New Releases...
   useEffect(() => {
     if (!accessToken) return;
 
@@ -56,7 +57,7 @@ const Body = ({ spotifyApi, chooseTrack }) => {
   }, [accessToken]);
 
   return (
-    <section className="bg-black ml-24 py-4 space-y-8 md:max-w-6xl flex-grow md:mr-2.5 font-body">
+    <section className="bg-black ml-24 py-4 space-y-8 md:max-w-6xl flex-grow md:mr-2.5">
       <Search search={search} setSearch={setSearch} />
       <div className="grid overflow-y-scroll scrollbar-hide h-96 py-4 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8 p-4">
         {searchResults.length === 0
@@ -95,13 +96,11 @@ const Body = ({ spotifyApi, chooseTrack }) => {
             <div className="genre">Country</div>
             <div className="genre">Techno</div>
           </div>
-          <button className="text-[#CECECE] bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full font-bold bg-opacity-80 hover:bg-opacity-100 transition ease-out">
-            All Genres
-          </button>
+          <button className="btn">All Genres</button>
         </div>
 
         {/* Tracks */}
-        <div className="w-full pr-11">
+        <div>
           <h2 className="text-white font-bold mb-3">
             {searchResults.length === 0 ? "New Releases" : "Tracks"}
           </h2>
@@ -130,6 +129,6 @@ const Body = ({ spotifyApi, chooseTrack }) => {
       </div>
     </section>
   );
-};
+}
 
 export default Body;

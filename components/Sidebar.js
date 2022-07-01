@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   ChartBarIcon,
   ClockIcon,
@@ -6,7 +7,6 @@ import {
 } from "@heroicons/react/solid";
 import { FaMicrophoneAlt } from "react-icons/fa";
 import { RiCompassFill } from "react-icons/ri";
-import Image from "next/image";
 
 function Sidebar() {
   return (

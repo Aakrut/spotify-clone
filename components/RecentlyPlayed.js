@@ -14,7 +14,7 @@ function RecentlyPlayed({ track, chooseTrack }) {
   };
 
   return (
-    <div className="flex items-center space-x-3 font-body" onClick={handlePlay}>
+    <div className="flex items-center space-x-3" onClick={handlePlay}>
       <img
         src={track.albumUrl}
         alt=""
