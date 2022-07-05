@@ -27,8 +27,24 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Screenshots
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Login
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Screenshot (70)](https://user-images.githubusercontent.com/67114280/177296033-78698c40-d8b6-43f2-ad0e-0364576b1c1c.png)
+
+Dashboard
+
+![Screenshot (67)](https://user-images.githubusercontent.com/67114280/177296241-e411f109-08de-48c7-a5c0-9040795f0655.png)
+
+Search
+
+![Screenshot (71)](https://user-images.githubusercontent.com/67114280/177296304-3438f9d7-8372-4bf5-8aa2-8075d2b070a1.png)
+
+Premium User Player (I Do not Have Premium For Spotify If You Have Then It Will Show the Player)
+
+![Screenshot (68)](https://user-images.githubusercontent.com/67114280/177296610-7da2c7ec-911e-4408-8469-bad19f9ffa8c.png)
+
+Free Users (Player Only For Show Case Can't Listen Songs)
+
+![Screenshot (69)](https://user-images.githubusercontent.com/67114280/177296889-35fd06e2-89cb-4260-b531-3c9ff1a19720.png)
